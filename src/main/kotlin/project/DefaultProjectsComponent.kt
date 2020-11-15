@@ -1,19 +1,16 @@
 package com.joostvandriel.expensify.project
 
 import com.joostvandriel.expensify.project.entities.Project
+import com.joostvandriel.expensify.project.entities.ProjectFactory
 import com.joostvandriel.expensify.project.entities.ProjectId
 import com.joostvandriel.expensify.project.gateways.ProjectsGateway
-import com.joostvandriel.expensify.project.services.UniqueIdGenerator
 
 class DefaultProjectsComponent(
     private val gateway: ProjectsGateway,
-    private val idGenerator: UniqueIdGenerator
+    private val projectFactory: ProjectFactory
 ) : ProjectsComponent {
     override fun create(name: String): Project {
-        val project = Project(
-            name = name,
-            id = ProjectId(idGenerator.generate())
-        )
+        val project = projectFactory.newProject(name = name)
         return gateway.save(project)
     }
 

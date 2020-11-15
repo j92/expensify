@@ -2,6 +2,7 @@ package project
 
 import com.joostvandriel.expensify.project.DefaultProjectsComponent
 import com.joostvandriel.expensify.project.entities.Project
+import com.joostvandriel.expensify.project.entities.ProjectFactory
 import com.joostvandriel.expensify.project.entities.ProjectId
 import com.joostvandriel.expensify.project.gateways.InMemoryProjectsGateway
 import com.joostvandriel.expensify.project.services.IncrementalIdGenerator
@@ -14,7 +15,7 @@ class DefaultProjectsComponentTest {
     private var gateway = InMemoryProjectsGateway();
     private val projects = DefaultProjectsComponent(
         gateway = gateway,
-        idGenerator = IncrementalIdGenerator()
+        projectFactory = ProjectFactory(idGenerator = IncrementalIdGenerator())
     )
 
     @Before
