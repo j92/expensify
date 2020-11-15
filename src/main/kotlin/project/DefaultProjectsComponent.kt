@@ -2,12 +2,12 @@ package com.joostvandriel.expensify.project
 
 import com.joostvandriel.expensify.project.entities.Project
 import com.joostvandriel.expensify.project.entities.ProjectId
-import com.joostvandriel.expensify.project.gateways.InMemoryProjectsGateway
-import com.joostvandriel.expensify.project.services.IncrementalIdGenerator
+import com.joostvandriel.expensify.project.gateways.ProjectsGateway
+import com.joostvandriel.expensify.project.services.UniqueIdGenerator
 
 class DefaultProjectsComponent(
-    private val gateway: InMemoryProjectsGateway,
-    private val idGenerator: IncrementalIdGenerator
+    private val gateway: ProjectsGateway,
+    private val idGenerator: UniqueIdGenerator
 ) : ProjectsComponent {
     override fun create(name: String): Project {
         val project = Project(
