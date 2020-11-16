@@ -23,4 +23,9 @@ interface ProjectsComponent {
      * Find a project by id
      */
     fun getProject(projectId: ProjectId): Project
+
+    /**
+     * Assign new rate to project
+     */
+    fun assignRate(projectId: ProjectId, rate: Double, start: String)
 }

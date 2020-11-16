@@ -3,6 +3,7 @@ package com.joostvandriel.expensify.project
 import com.joostvandriel.expensify.project.entities.Project
 import com.joostvandriel.expensify.project.entities.ProjectFactory
 import com.joostvandriel.expensify.project.entities.ProjectId
+import com.joostvandriel.expensify.project.entities.ProjectRate
 import com.joostvandriel.expensify.project.gateways.ProjectsGateway
 
 class DefaultProjectsComponent(
@@ -25,5 +26,10 @@ class DefaultProjectsComponent(
 
     override fun getProject(projectId: ProjectId): Project {
         return gateway.find(projectId)
+    }
+
+    override fun assignRate(projectId: ProjectId, rate: Double, start: String) {
+        val project = gateway.find(projectId)
+        project.assignRate(ProjectRate.create(rate = rate, start = start))
     }
 }
