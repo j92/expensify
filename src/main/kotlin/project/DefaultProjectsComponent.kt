@@ -1,10 +1,11 @@
-package com.joostvandriel.expensify.project
+package project
 
-import com.joostvandriel.expensify.project.entities.Project
-import com.joostvandriel.expensify.project.entities.ProjectFactory
-import com.joostvandriel.expensify.project.entities.ProjectId
-import com.joostvandriel.expensify.project.entities.ProjectRate
-import com.joostvandriel.expensify.project.gateways.ProjectsGateway
+import project.entities.Project
+import project.entities.ProjectFactory
+import project.entities.ProjectId
+import project.entities.ProjectRate
+import project.gateways.ProjectsGateway
+import project.ProjectsComponent
 
 class DefaultProjectsComponent(
     private val gateway: ProjectsGateway,

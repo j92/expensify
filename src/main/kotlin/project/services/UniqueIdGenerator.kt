@@ -1,4 +1,4 @@
-package com.joostvandriel.expensify.project.services
+package project.services
 
 interface UniqueIdGenerator {
     fun generate(): String

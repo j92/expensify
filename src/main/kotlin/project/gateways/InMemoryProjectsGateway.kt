@@ -1,8 +1,8 @@
-package com.joostvandriel.expensify.project.gateways
+package project.gateways
 
-import com.joostvandriel.expensify.project.entities.Project
-import com.joostvandriel.expensify.project.entities.ProjectId
-import com.joostvandriel.expensify.project.entities.ProjectNotFound
+import project.entities.Project
+import project.entities.ProjectId
+import project.entities.ProjectNotFound
 
 class InMemoryProjectsGateway: ProjectsGateway {
     private val projects = mutableMapOf<String, Project>()

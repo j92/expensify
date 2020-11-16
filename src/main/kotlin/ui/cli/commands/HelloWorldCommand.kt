@@ -1,4 +1,4 @@
-package com.joostvandriel.expensify.ui.cli.commands
+package ui.cli.commands
 
 import kotlinx.cli.ExperimentalCli
 import kotlinx.cli.Subcommand

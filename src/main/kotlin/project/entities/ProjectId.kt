@@ -1,4 +1,4 @@
-package com.joostvandriel.expensify.project.entities
+package project.entities
 
 class ProjectId(private val id: String) {
     override fun toString(): String {

@@ -1,2 +1,1 @@
-rootProject.name = "ExpensifyKotlin"
-
+rootProject.name = "expensify"

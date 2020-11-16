@@ -1,5 +1,3 @@
-package expensify
-
 import com.joostvandriel.expensify.ui.cli.app
 import kotlinx.cli.ExperimentalCli
 

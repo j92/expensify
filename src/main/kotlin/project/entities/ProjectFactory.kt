@@ -1,6 +1,8 @@
-package com.joostvandriel.expensify.project.entities
+package project.entities
 
-import com.joostvandriel.expensify.project.services.UniqueIdGenerator
+import project.services.UniqueIdGenerator
+import project.entities.Project
+import project.entities.ProjectId
 
 class ProjectFactory(private val idGenerator: UniqueIdGenerator) {
     fun newProject(name: String): Project {

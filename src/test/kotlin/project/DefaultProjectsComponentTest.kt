@@ -1,13 +1,11 @@
 package project
 
-import com.joostvandriel.expensify.project.DefaultProjectsComponent
-import com.joostvandriel.expensify.project.ProjectsComponent
-import com.joostvandriel.expensify.project.entities.Project
-import com.joostvandriel.expensify.project.entities.ProjectFactory
-import com.joostvandriel.expensify.project.entities.ProjectId
-import com.joostvandriel.expensify.project.entities.ProjectRate
-import com.joostvandriel.expensify.project.gateways.InMemoryProjectsGateway
-import com.joostvandriel.expensify.project.services.IncrementalIdGenerator
+import project.entities.Project
+import project.entities.ProjectFactory
+import project.entities.ProjectId
+import project.entities.ProjectRate
+import project.gateways.InMemoryProjectsGateway
+import project.services.IncrementalIdGenerator
 import org.junit.Before
 import org.junit.Test
 import kotlin.test.assertEquals

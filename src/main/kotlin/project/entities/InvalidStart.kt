@@ -1,4 +1,4 @@
-package com.joostvandriel.expensify.project.entities
+package project.entities
 
 class InvalidStart(message: String) : Throwable(message) {
     companion object {

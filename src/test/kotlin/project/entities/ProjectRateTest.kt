@@ -1,7 +1,5 @@
 package project.entities
 
-import com.joostvandriel.expensify.project.entities.InvalidStart
-import com.joostvandriel.expensify.project.entities.ProjectRate
 import org.junit.Test
 import kotlin.test.assertFailsWith
 
@@ -13,6 +11,6 @@ class ProjectRateTest {
 
     @Test
     fun failsWhenGivenInvalidStart() {
-        assertFailsWith<InvalidStart>(block = {ProjectRate.create(10.00, "invalid start")})
+        assertFailsWith<InvalidStart>(block = { ProjectRate.create(10.00, "invalid start")})
     }
 }

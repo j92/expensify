@@ -1,4 +1,4 @@
-package com.joostvandriel.expensify.project.entities
+package project.entities
 
 import java.time.LocalDate
 import java.time.format.DateTimeParseException

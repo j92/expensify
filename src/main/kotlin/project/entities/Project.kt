@@ -1,4 +1,4 @@
-package com.joostvandriel.expensify.project.entities
+package project.entities
 
 class Project(private var name: String, val id: ProjectId) {
     private var rates: MutableList<ProjectRate> = mutableListOf()

@@ -6,7 +6,7 @@ plugins {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("com.joostvandriel.expensify.AppKt")
 }
 
 group = "org.expensify"

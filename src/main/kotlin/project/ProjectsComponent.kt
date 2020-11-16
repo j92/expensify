@@ -1,7 +1,7 @@
-package com.joostvandriel.expensify.project
+package project
 
-import com.joostvandriel.expensify.project.entities.Project
-import com.joostvandriel.expensify.project.entities.ProjectId
+import project.entities.Project
+import project.entities.ProjectId
 
 interface ProjectsComponent {
     /**

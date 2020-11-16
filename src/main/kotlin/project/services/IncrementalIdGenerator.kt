@@ -1,6 +1,6 @@
-package com.joostvandriel.expensify.project.services
+package project.services
 
-class IncrementalIdGenerator:UniqueIdGenerator {
+class IncrementalIdGenerator: UniqueIdGenerator {
     private var id: Int = 0
     override fun generate(): String {
         id = id.plus(1)

@@ -1,6 +1,5 @@
 package project.services
 
-import com.joostvandriel.expensify.project.services.IncrementalIdGenerator
 import org.junit.Test
 import kotlin.test.assertEquals
 

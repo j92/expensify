@@ -1,6 +1,6 @@
 package com.joostvandriel.expensify.ui.cli
 
-import com.joostvandriel.expensify.ui.cli.commands.HelloWorldCommand
+import ui.cli.commands.HelloWorldCommand
 import kotlinx.cli.*
 
 @ExperimentalCli
