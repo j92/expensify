@@ -33,4 +33,8 @@ class DefaultProjectsComponent(
         val project = gateway.find(projectId)
         project.assignRate(ProjectRate.create(rate = rate, start = start))
     }
+
+    override fun listProjects(): List<Project> {
+        return gateway.findAll()
+    }
 }

@@ -7,4 +7,5 @@ interface ProjectsGateway {
     fun countAllProjects(): Int
     fun save(project: Project): Project
     fun find(projectId: ProjectId): Project
+    fun findAll(): List<Project>
 }

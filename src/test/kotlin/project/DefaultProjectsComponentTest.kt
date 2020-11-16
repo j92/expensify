@@ -95,4 +95,13 @@ class DefaultProjectsComponentTest {
         val expectedRate = ProjectRate.create(80.00, "2020-10-01")
         assertEquals(expectedRate.toString(), currentRate.toString())
     }
+
+    @Test
+    fun canGetListOfProjects() {
+        gateway.save(project = Project("Project X", ProjectId("1")))
+        gateway.save(project = Project("Project Y", ProjectId("2")))
+
+        val projects = projects.listProjects()
+        assertEquals(2, projects.size)
+    }
 }

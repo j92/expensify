@@ -28,4 +28,9 @@ interface ProjectsComponent {
      * Assign new rate to project
      */
     fun assignRate(projectId: ProjectId, rate: Double, start: String)
+
+    /**
+     * Get a list of projects
+     */
+    fun listProjects(): List<Project>
 }

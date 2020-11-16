@@ -20,6 +20,10 @@ class InMemoryProjectsGateway: ProjectsGateway {
         return project
     }
 
+    override fun findAll(): List<Project> {
+        return projects.values.toList()
+    }
+
     override fun countAllProjects(): Int {
         return projects.size
     }
