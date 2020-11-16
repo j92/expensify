@@ -1,11 +1,16 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    application
     kotlin("jvm") version "1.4.10"
 }
 
+application {
+    mainClass.set("MainKt")
+}
+
 group = "org.expensify"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
