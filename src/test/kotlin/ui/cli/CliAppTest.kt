@@ -61,6 +61,25 @@ class CliAppTest {
         assertOutputContains("[2] Project Y")
     }
 
+    @Test
+    fun canCreateProject() {
+        val gateway = InMemoryProjectsGateway()
+        val projectsComponent = DefaultProjectsComponent(
+            gateway = gateway,
+            projectFactory = ProjectFactory(
+                idGenerator = IncrementalIdGenerator()
+            )
+        )
+
+        app(
+            args = arrayOf("projects:create", "Project X"),
+            projectsComponent = projectsComponent,
+            output = output
+        )
+
+        assertOutputContains("[1] Project X created")
+    }
+
     private fun assertOutputContains(line: String) {
         val lines = output.lines()
         if (!lines.contains(line)) {
